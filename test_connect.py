@@ -1,5 +1,5 @@
 import cv2
-from pyparrot.AirSim import JumpingSumo as Sumo
+from pyparrot.Minidrone import JumpingSumo as Sumo
 from pyparrot.DroneVision import DroneVision
 
 def test_connection():
