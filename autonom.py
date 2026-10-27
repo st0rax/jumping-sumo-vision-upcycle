@@ -13,7 +13,7 @@ Benötigt:
 """
 import cv2
 import time
-from pyparrot.AirSim import JumpingSumo as Sumo
+from pyparrot.Minidrone import JumpingSumo as Sumo
 
 # ---- Konfiguration ----
 SUMO_IP = "192.168.1.100"      # Sumo-WLAN-Adresse (IP des Sumo-AP)
