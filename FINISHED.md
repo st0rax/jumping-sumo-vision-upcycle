@@ -1,0 +1,1 @@
+{"status":"FINISHED","datum":"2026-10-27","repo":"jumping-sumo-vision-upcycle","master":"cfd6f94","projekt":"sumo-autonom-vision-fw","ergebnis":"AP-Connection+App-Steuerung+bestaetigt_pyparrot_blockiert","next":"Fw_Entwicklung_ARSDK_oder_Manual_App_Fahren"}
