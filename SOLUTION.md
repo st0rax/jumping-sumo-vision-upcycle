@@ -1,22 +1,17 @@
-# Lösung — Sumo Autonom / Firmware
+# EINZIGE AKZEPTIERTE LÖSUNG (BESTÄTIGT)
 
-Problem: pyparrot.connect blockiert (WiFi verbunden, aber Python-API hängt).
-Ursache nicht Kabel, nicht Akku — Protokoll/Verbindungszustand.
+TEST-ERGEBNIS (27.10.2026):
+- `pyparrot.connect` → HANG (alle Versuche fehlgeschlagen)
+- `fly_direct()` ohne connect → NEIN, Sumo bewegt sich NICHT (bestätigt)
+- `curl` HTTP → 404 / kein Steuer-Endpunkt
+- App (FreeFlight 3) → JA, funktioniert
 
-Funktionierende Lösung:
-- Steuerung: FreeFlight 3 App (funktioniert, bestätigt)
-- Logging: `kartierung.py` / `map_sonar.py` (manuell/automatisch)
-- Firmware (from scratch): `fw/` im Repo — muss separat untersucht werden
+FUNKTIONIERENDE STEUERUNG:
+Nur FreeFlight 3 App. Keine Python-Alternative mit diesem Sumo-Zustand.
 
-Status: Ready. Sumo an, WLAN verbunden.
+NÄCHSTE SCHRITTE:
+1. Kartierung: App fahren → `wohnung_karte.json` (manuell loggen)
+2. Firmware (from scratch): Separates Projekt (`fw/`)
+3. Sonar-Mapping: `map_sonar.py` bereit für Daten
 
-PROBLEM BESTÄTIGT (Timeout 12s, Thread 7s, Signal 5s):
-pyparrot.connect hängt bei allen Versuchen.
-Ursache nicht Kabel, nicht Akku, nicht IP — Protokoll/Verbindungszustand.
-
-EINZIGE LÖSUNG (funktioniert jetzt):
-- Steuerung: FreeFlight 3 App (bestätigt funktionierend)
-- Log: wohnung_karte.json + map_sonar.py
-- Automatisch: watchdog prüft AP, startet bei Verfügbarkeit
-
-Firmware (from scratch): Separates Projekt — nicht mit pyparrot verbunden.
+Repo: https://github.com/st0rax/jumping-sumo-vision-upcycle
